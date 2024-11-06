@@ -1,9 +1,10 @@
+import LandingPage from "./components/landing";
 import CreateDocument from "./pages/create-document";
 
 function App() {
   return (
     <>
-      <CreateDocument />
+      <LandingPage />
     </>
   );
 }
