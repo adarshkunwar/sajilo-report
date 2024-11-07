@@ -46,11 +46,13 @@ const PDFChapter = ({ chapter, index }: PDFChapterProps) => {
                 <Text style={styles.subheadingNumber}>
                   {index + 1}.{subIndex + 1}
                 </Text>
-                <Text style={styles.subheadingText}>{subsec.title}</Text>
+                <Text style={styles.subheadingText}>
+                  {subsec.content[0].value as string}
+                </Text>
               </View>
               {subsec.content.map((subContent, subContentIndex) => (
                 <Text key={subContentIndex} style={styles.paragraph}>
-                  {subContent.value}
+                  {subContent.value as string}
                 </Text>
               ))}
             </View>

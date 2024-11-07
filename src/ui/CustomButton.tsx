@@ -1,5 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
 import { Link } from "react-scroll";
+import { cn } from "../utils/clsx";
 
 type TCustomButton = (
   | {
@@ -16,6 +17,7 @@ type TCustomButton = (
   ButtonHTMLAttributes<HTMLButtonElement> & {
     text: string;
     size: "sm" | "md" | "lg";
+    className?: string;
   };
 
 const CustomButton: React.FC<TCustomButton> = ({
@@ -39,7 +41,7 @@ const CustomButton: React.FC<TCustomButton> = ({
     link: "border hover:bg-blue-500 hover:text-white",
   };
 
-  const className = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]}`;
+  const customClass = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]}`;
 
   if (link) {
     return (
@@ -48,7 +50,7 @@ const CustomButton: React.FC<TCustomButton> = ({
           to={link}
           smooth
           duration={500}
-          className={className}
+          className={cn(customClass, buttonProps.className)}
           {...buttonProps}
         >
           {text}
@@ -58,7 +60,11 @@ const CustomButton: React.FC<TCustomButton> = ({
   }
 
   return (
-    <button onClick={onClick} className={className} {...buttonProps}>
+    <button
+      onClick={onClick}
+      className={cn(customClass, buttonProps.className)}
+      {...buttonProps}
+    >
       {text}
     </button>
   );

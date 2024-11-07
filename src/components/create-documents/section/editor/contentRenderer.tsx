@@ -3,21 +3,16 @@ import {
   TContentItem,
   TFigure,
   THeading,
-  TList,
   TParagraph,
 } from "../../../../types/create-document";
 import Heading from "./heading/heading";
 import Figure from "./image/Figure";
 import Paragraph from "./paragraphs/paragraph";
 import { RxCross2 } from "react-icons/rx";
-import ListComponent from "./list/list";
 
 type TContentRenderer = {
   content: TContentItem[];
-  onUpdate: (
-    index: number,
-    value: THeading | TParagraph | TFigure | TList,
-  ) => void;
+  onUpdate: (index: number, value: THeading | TParagraph | TFigure) => void;
   onRemove: (index: number) => void;
 };
 
@@ -83,15 +78,6 @@ export const ContentRenderer: React.FC<TContentRenderer> = ({
                 <Figure
                   image={contentItem.value}
                   setImage={(value: TFigure) => onUpdate(index, value)}
-                />
-              </Wrapper>
-            );
-          case "list":
-            return (
-              <Wrapper key={key} index={index} onRemove={onRemove}>
-                <ListComponent
-                  list={contentItem.value}
-                  setList={(value: TList) => onUpdate(index, value)}
                 />
               </Wrapper>
             );

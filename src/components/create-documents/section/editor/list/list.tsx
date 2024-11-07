@@ -1,12 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  List,
-  Plus,
-  Minus,
-  ChevronRight,
-  ChevronDown,
-  Trash2,
-} from "lucide-react";
+import { useEffect, useState } from "react";
+import { List, Plus, ChevronRight, ChevronDown, Trash2 } from "lucide-react";
 
 type TList = {
   type: "ordered" | "unordered";

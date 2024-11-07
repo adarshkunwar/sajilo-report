@@ -1,9 +1,10 @@
 import { Mail, MessageSquare, Phone } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Element } from "react-scroll";
 
 const ContactSection = () => {
   const [formStatus, setFormStatus] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
 
   const contactInfo = [
     {
@@ -15,22 +16,25 @@ const ContactSection = () => {
     {
       icon: MessageSquare,
       title: "Messages",
-      description: "Chat with our support team via messneger.",
+      description: "Chat with our support team via messenger.",
       contact: "Available 24/7",
     },
     {
       icon: Phone,
       title: "Phone",
       description: "Mon-Fri from 8am to 5pm.",
-      contact: "+977 9847543062 ",
+      contact: "+977 9847543062",
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormStatus("Thank you! We'll get back to you soon.");
-    // Reset form
-    e.target.reset();
+
+    if (formRef.current) {
+      formRef.current.reset();
+    }
+
     // Clear status after 3 seconds
     setTimeout(() => setFormStatus(""), 3000);
   };
@@ -75,7 +79,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="mx-auto max-w-3xl">
             <div className="rounded-2xl bg-white p-8 shadow-lg">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
                     <label

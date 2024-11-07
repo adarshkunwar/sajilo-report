@@ -3,7 +3,6 @@ import { Tsection, TContentItem } from "../../../../types/create-document";
 import HeadingRender from "./heading-render";
 import ParagraphRender from "./paragraph-render";
 import ImageRenderer from "./image-renderer";
-import ListRenderer from "./list-render";
 
 const Chapter = ({ id, data }: { id: string; data: Tsection }) => {
   const {
@@ -38,9 +37,6 @@ const Chapter = ({ id, data }: { id: string; data: Tsection }) => {
         }
         if (contentItem.type === "figure") {
           return <ImageRenderer key={index} figure={contentItem.value} />;
-        }
-        if (contentItem.type === "list") {
-          return <ListRenderer key={index} list={contentItem.value} />;
         }
       })}
       {subsection &&

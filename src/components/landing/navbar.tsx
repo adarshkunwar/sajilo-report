@@ -82,8 +82,9 @@ const Navbar = () => {
               <CustomButton
                 size="md"
                 text="Get Started"
-                variant="primary"
-                link="#pricing"
+                variant="link"
+                link=""
+                className="text-white bg-blue-600 hover:bg-blue-800 rounded px-4 py-2 font-semibold focus:outline-none"
               />
             </div>
           </div>
@@ -132,9 +133,9 @@ const Navbar = () => {
               <CustomButton
                 size="md"
                 text="Get Started"
-                variant="primary"
-                link="#pricing"
-                className="w-full justify-start text-lg"
+                variant="link"
+                link=""
+                className="text-white bg-blue-600 hover:bg-blue-800 rounded px-4 py-2 font-semibold focus:outline-none"
               />
             </div>
           </div>
