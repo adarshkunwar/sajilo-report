@@ -15,7 +15,6 @@ type TCustomButton = (
   ButtonHTMLAttributes<HTMLButtonElement> & {
     text: string;
     size: "sm" | "md" | "lg";
-    color: "black" | "white";
   };
 
 const CustomButton: React.FC<TCustomButton> = ({

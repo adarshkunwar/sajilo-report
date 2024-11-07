@@ -35,12 +35,6 @@ const Navbar = () => {
               />
             ))}
           </div>
-          <CustomButton
-            size="md"
-            text={"Get started"}
-            variant="link"
-            link={"/"}
-          />
         </div>
       </div>
     </nav>
