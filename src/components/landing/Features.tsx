@@ -1,4 +1,4 @@
-import { BarChart2, Clock, FileText, Check } from "lucide-react";
+import { BarChart2, Clock, FileText } from "lucide-react";
 
 const Features = () => {
   return (
@@ -12,30 +12,30 @@ const Features = () => {
             <div className="mb-4 flex justify-center">
               <BarChart2 className="h-12 w-12 text-blue-600" />
             </div>
-            <h3 className="mb-4 text-xl font-semibold">Smart Analytics</h3>
+            <h3 className="mb-4 text-xl font-semibold">Pre built templates</h3>
             <p className="text-gray-600">
-              Automatically generate insights from your data with our AI-powered
-              analytics engine.
+              Choose from a variety of pre-built templates to get started
+              quickly.
             </p>
           </div>
           <div className="text-center">
             <div className="mb-4 flex justify-center">
               <Clock className="h-12 w-12 text-blue-600" />
             </div>
-            <h3 className="mb-4 text-xl font-semibold">Automated Reports</h3>
+            <h3 className="mb-4 text-xl font-semibold">Simple but efficeint</h3>
             <p className="text-gray-600">
-              Schedule reports to run automatically and deliver to stakeholders
-              on time.
+              Our platform is designed to be simple and easy to use, yet
+              powerful.
             </p>
           </div>
           <div className="text-center">
             <div className="mb-4 flex justify-center">
               <FileText className="h-12 w-12 text-blue-600" />
             </div>
-            <h3 className="mb-4 text-xl font-semibold">Custom Templates</h3>
+            <h3 className="mb-4 text-xl font-semibold">Feature complete</h3>
             <p className="text-gray-600">
-              Create and save custom report templates that match your brand
-              identity.
+              Nearly everything you could possibly want to do with the reports,
+              can be done here
             </p>
           </div>
         </div>
