@@ -1,10 +1,10 @@
-import { ArrowRight, BarChart2, Clock, FileText, Check } from "lucide-react";
 import Navbar from "./navbar";
 import Hero from "./Hero";
 import Features from "./Features";
 import Pricing from "./pricing";
 import Testimonials from "./testimonials";
 import Footer from "./footer";
+import ContactSection from "./Contact";
 
 const LandingPage = () => {
   return (
@@ -19,6 +19,7 @@ const LandingPage = () => {
       <Features />
       <Pricing />
       <Testimonials />
+      <ContactSection />
       <Footer />
     </div>
   );
