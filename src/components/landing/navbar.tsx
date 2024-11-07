@@ -5,19 +5,19 @@ import CustomButton from "../../ui/CustomButton";
 const Links = [
   {
     name: "Home",
-    link: "/",
+    link: "hero",
   },
   {
     name: "Features",
-    link: "#features",
+    link: "feature",
   },
   {
     name: "Pricing",
-    link: "#pricing",
+    link: "pricing",
   },
   {
     name: "Contact",
-    link: "#contact",
+    link: "contact",
   },
 ];
 
