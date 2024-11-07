@@ -32,34 +32,34 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="bg-white py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-4xl font-bold text-gray-900">
             Loved by data-driven teams
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mx-auto max-w-2xl text-lg text-gray-600">
             Join hundreds of professionals who've simplified their reporting
             workflow
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg"
+              className="rounded-2xl bg-gray-50 p-8 transition-all duration-300 hover:shadow-lg"
             >
-              <div className="flex mb-4">
+              <div className="mb-4 flex">
                 {[...Array(testimonial.stars)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-5 h-5 text-yellow-400 fill-yellow-400"
+                    className="h-5 w-5 fill-yellow-400 text-yellow-400"
                   />
                 ))}
               </div>
 
-              <blockquote className="text-gray-700 mb-6">
+              <blockquote className="mb-6 text-gray-700">
                 "{testimonial.content}"
               </blockquote>
 
@@ -67,7 +67,7 @@ const Testimonials = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mr-4"
+                  className="mr-4 h-12 w-12 rounded-full"
                 />
                 <div>
                   <div className="font-semibold text-gray-900">
@@ -83,10 +83,10 @@ const Testimonials = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <p className="text-gray-600 mb-6">
+          <p className="mb-6 text-gray-600">
             Join these satisfied users and streamline your reporting today
           </p>
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-200">
+          <button className="rounded-xl bg-blue-600 px-8 py-3 font-semibold text-white transition-colors duration-200 hover:bg-blue-700">
             Get Started Free
           </button>
         </div>

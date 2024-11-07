@@ -46,22 +46,22 @@ const Navbar = () => {
   return (
     <div
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm" : "bg-white"
+        scrolled ? "bg-white/80 shadow-sm backdrop-blur-md" : "bg-white"
       }`}
     >
       <nav className="container mx-auto px-4 sm:px-6">
-        <div className="relative flex h-16 sm:h-20 items-center justify-between">
+        <div className="relative flex h-16 items-center justify-between sm:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <a
               href="/"
-              className="flex items-center space-x-2 group"
+              className="group flex items-center space-x-2"
               onClick={handleLinkClick}
             >
-              <div className="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center transition-transform group-hover:scale-105">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 transition-transform group-hover:scale-105">
                 <span className="text-xl font-bold text-white">SR</span>
               </div>
-              <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-xl font-bold text-transparent sm:text-2xl">
                 Sajilo Report
               </span>
             </a>
@@ -112,8 +112,8 @@ const Navbar = () => {
         <div
           className={`transform transition-all duration-300 ease-in-out md:hidden ${
             isMobileMenuOpen
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 -translate-y-4 pointer-events-none"
+              ? "translate-y-0 opacity-100"
+              : "pointer-events-none -translate-y-4 opacity-0"
           }`}
         >
           <div className={`px-2 pb-4 ${isMobileMenuOpen ? "block" : "hidden"}`}>

@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes } from "react";
+import { Link } from "react-scroll";
 
 type TCustomButton = (
   | {
@@ -43,9 +44,15 @@ const CustomButton: React.FC<TCustomButton> = ({
   if (link) {
     return (
       <button>
-        <a href={link} className={className} {...buttonProps}>
+        <Link
+          to={link}
+          smooth
+          duration={500}
+          className={className}
+          {...buttonProps}
+        >
           {text}
-        </a>
+        </Link>
       </button>
     );
   }
